@@ -1,4 +1,3 @@
-const fs = require('fs');
 const { Client, GatewayIntentBits, Intents } = require('discord.js');
 
 const client = new Client({
@@ -9,7 +8,6 @@ const client = new Client({
 });
 
 // config.jsonファイルを読み込む
-const config = JSON.parse(fs.readFileSync('config.json'));
 
 client.once('ready', () => {
   console.log(`ログインしました。${client.user.tag}!`);
@@ -46,4 +44,4 @@ client.on('messageCreate', async (message) => {
 });
 
 // config.jsonのTOKENを読み込む
-client.login(config.discord_token);
+client.login("TOKEN");
